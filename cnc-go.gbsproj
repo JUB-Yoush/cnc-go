@@ -29,15 +29,123 @@
                     "paletteId": "",
                     "isPinned": false,
                     "collisionGroup": "",
-                    "script": [],
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Hehe hoho!\n",
+                                    "Pick one of them!"
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "a03261e5-d705-42ac-8df8-b437d56d5f49"
+                        }
+                    ],
                     "startScript": [],
                     "updateScript": [],
                     "hit1Script": [],
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "65bd8b33-8f90-4947-be91-3f8512895638",
-                    "x": 8,
+                    "x": 9,
                     "y": 2
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "311601fa-b2ab-4708-a7b6-cb19bfb04a66",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "",
+                    "script": [
+                        {
+                            "command": "EVENT_CHOICE",
+                            "args": {
+                                "variable": "L0",
+                                "trueText": "Pick STR",
+                                "falseText": "don't pick STR"
+                            },
+                            "id": "19b3cb9d-ed19-4a33-9655-b6a721e7cdcc"
+                        },
+                        {
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "L0",
+                                "__collapseElse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "STR selected"
+                                            ],
+                                            "avatarId": ""
+                                        },
+                                        "id": "e960ee16-8a53-4b82-8069-128e007e12dd"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "d297dd2b-26af-49ad-8a91-49368aabdfb2"
+                        }
+                    ],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "d4fb7cae-1e61-4544-b83c-e3b8ac41500e",
+                    "x": 2,
+                    "y": 15
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "864de690-1fde-4da3-93c0-61e159fb0b40",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "",
+                    "script": [],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "7f6c09ab-3e7e-4ad7-8ed1-dac94ee9c142",
+                    "x": 9,
+                    "y": 15
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "0902667c-3a1c-427d-95de-9ddbec060494",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "",
+                    "script": [],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "f63e34b9-e600-4a0d-8bcf-978897febbc4",
+                    "x": 16,
+                    "y": 15
                 }
             ],
             "triggers": [],
@@ -2277,7 +2385,12 @@
             "filename": "sweat.png"
         }
     ],
-    "variables": [],
+    "variables": [
+        {
+            "id": "d4fb7cae-1e61-4544-b83c-e3b8ac41500e__L0",
+            "name": "picked_str"
+        }
+    ],
     "engineFieldValues": [
         {
             "id": "fade_style",
@@ -2293,8 +2406,8 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 1096,
-        "worldScrollY": 796,
+        "worldScrollX": 1114.4000244140625,
+        "worldScrollY": 888,
         "zoom": 350,
         "customColorsEnabled": false,
         "sgbEnabled": false,
@@ -2323,9 +2436,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            620,
-            188,
-            188
+            74,
+            30,
+            677
         ],
         "showNavigator": true,
         "defaultFontId": "4bd653f0-e08d-424e-9e5b-c1f3aaa21e47",
