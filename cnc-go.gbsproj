@@ -31,15 +31,48 @@
                     "collisionGroup": "",
                     "script": [
                         {
-                            "command": "EVENT_TEXT",
+                            "command": "EVENT_IF_FALSE",
                             "args": {
-                                "text": [
-                                    "Hehe hoho!\n",
-                                    "Pick one of them!"
-                                ],
-                                "avatarId": ""
+                                "variable": "1",
+                                "__collapseElse": false
                             },
-                            "id": "a03261e5-d705-42ac-8df8-b437d56d5f49"
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "Great! you picked\none."
+                                            ],
+                                            "avatarId": "",
+                                            "__collapse": true
+                                        },
+                                        "id": "0b1c286c-22cb-45a4-92e4-235ae66760ed"
+                                    }
+                                ],
+                                "false": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "Strenght, Dexter-\nity, and magic.",
+                                                "... pick one!\ni'll do the same."
+                                            ],
+                                            "avatarId": "",
+                                            "__collapse": false
+                                        },
+                                        "id": "8ebf0a02-dc99-41d5-8dbc-840616939837"
+                                    },
+                                    {
+                                        "command": "EVENT_SET_TRUE",
+                                        "args": {
+                                            "variable": "1"
+                                        },
+                                        "id": "03965502-20ef-45dc-80a0-cd70255de59a"
+                                    }
+                                ]
+                            },
+                            "id": "aaa0be41-3999-4d7d-ba63-730b3119c12b"
                         }
                     ],
                     "startScript": [],
@@ -66,7 +99,7 @@
                         {
                             "command": "EVENT_CHOICE",
                             "args": {
-                                "variable": "L0",
+                                "variable": "3",
                                 "trueText": "Pick STR",
                                 "falseText": "don't pick STR"
                             },
@@ -76,7 +109,8 @@
                             "command": "EVENT_IF_TRUE",
                             "args": {
                                 "variable": "L0",
-                                "__collapseElse": true
+                                "__collapseElse": true,
+                                "__collapse": true
                             },
                             "children": {
                                 "true": [
@@ -89,6 +123,13 @@
                                             "avatarId": ""
                                         },
                                         "id": "e960ee16-8a53-4b82-8069-128e007e12dd"
+                                    },
+                                    {
+                                        "command": "EVENT_SET_FALSE",
+                                        "args": {
+                                            "variable": "1"
+                                        },
+                                        "id": "a37a1018-ea94-4ad5-9918-98927b8d1f6e"
                                     }
                                 ],
                                 "false": []
@@ -116,7 +157,49 @@
                     "paletteId": "",
                     "isPinned": false,
                     "collisionGroup": "",
-                    "script": [],
+                    "script": [
+                        {
+                            "command": "EVENT_CHOICE",
+                            "args": {
+                                "variable": "0",
+                                "trueText": "Pick DEX",
+                                "falseText": "Don't pick DEX"
+                            },
+                            "id": "7579b649-b325-495a-8aca-cb41940d6a7c"
+                        },
+                        {
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "0",
+                                "__collapseElse": true,
+                                "__collapse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "Picked DEX"
+                                            ],
+                                            "avatarId": ""
+                                        },
+                                        "id": "4e559956-55a0-4227-a268-24e9e8d16957"
+                                    },
+                                    {
+                                        "command": "EVENT_SET_FALSE",
+                                        "args": {
+                                            "variable": "1",
+                                            "__collapse": false
+                                        },
+                                        "id": "ea8ea53f-d369-4afc-8cd3-2c9a497b9230"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "399b98e0-88d2-419d-9d76-cafcc720753c"
+                        }
+                    ],
                     "startScript": [],
                     "updateScript": [],
                     "hit1Script": [],
@@ -137,7 +220,17 @@
                     "paletteId": "",
                     "isPinned": false,
                     "collisionGroup": "",
-                    "script": [],
+                    "script": [
+                        {
+                            "command": "EVENT_CHOICE",
+                            "args": {
+                                "variable": "3",
+                                "trueText": "Pick MAG",
+                                "falseText": "Don't pick MAG"
+                            },
+                            "id": "e29dea11-1e87-4006-a8a7-8f0f7468b387"
+                        }
+                    ],
                     "startScript": [],
                     "updateScript": [],
                     "hit1Script": [],
@@ -149,7 +242,15 @@
                 }
             ],
             "triggers": [],
-            "script": [],
+            "script": [
+                {
+                    "command": "EVENT_SET_TRUE",
+                    "args": {
+                        "variable": "1"
+                    },
+                    "id": "68379074-9eef-4514-959a-1b57097fe038"
+                }
+            ],
             "playerHit1Script": [],
             "playerHit2Script": [],
             "playerHit3Script": [],
@@ -2388,7 +2489,23 @@
     "variables": [
         {
             "id": "d4fb7cae-1e61-4544-b83c-e3b8ac41500e__L0",
+            "name": "Local 0"
+        },
+        {
+            "id": "0",
+            "name": "picked_dex"
+        },
+        {
+            "id": "1",
+            "name": "selecting"
+        },
+        {
+            "id": "2",
             "name": "picked_str"
+        },
+        {
+            "id": "3",
+            "name": "picked_mag"
         }
     ],
     "engineFieldValues": [
@@ -2406,8 +2523,8 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 1114.4000244140625,
-        "worldScrollY": 888,
+        "worldScrollX": 1042,
+        "worldScrollY": 737,
         "zoom": 350,
         "customColorsEnabled": false,
         "sgbEnabled": false,
@@ -2436,9 +2553,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            74,
+            95,
             30,
-            677
+            871
         ],
         "showNavigator": true,
         "defaultFontId": "4bd653f0-e08d-424e-9e5b-c1f3aaa21e47",
