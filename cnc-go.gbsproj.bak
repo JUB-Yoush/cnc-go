@@ -414,7 +414,7 @@
                                     {
                                         "command": "EVENT_VARIABLE_MATH_EVALUATE",
                                         "args": {
-                                            "variable": "9",
+                                            "variable": "10",
                                             "expression": ""
                                         },
                                         "id": "a6e98bab-91d4-43e3-8253-296a3f7b8595"
@@ -3499,6 +3499,10 @@
         {
             "id": "9",
             "name": "e_picked_dex"
+        },
+        {
+            "id": "10",
+            "name": "e_picked_mag"
         }
     ],
     "engineFieldValues": [

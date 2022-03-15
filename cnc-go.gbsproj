@@ -405,19 +405,11 @@
                                         "command": "EVENT_TEXT",
                                         "args": {
                                             "text": [
-                                                "hehe hoho!\nnow it's my turn!"
+                                                "Hehe hoho!\nnow it's my turn!"
                                             ],
                                             "avatarId": ""
                                         },
                                         "id": "1d2ec126-b48f-4190-8de1-5992fcb811cf"
-                                    },
-                                    {
-                                        "command": "EVENT_VARIABLE_MATH_EVALUATE",
-                                        "args": {
-                                            "variable": "10",
-                                            "expression": ""
-                                        },
-                                        "id": "a6e98bab-91d4-43e3-8253-296a3f7b8595"
                                     }
                                 ],
                                 "false": []
@@ -3477,10 +3469,6 @@
             "name": "cursor_pos"
         },
         {
-            "id": "d4fb7cae-1e61-4544-b83c-e3b8ac41500e__L0",
-            "name": "Local 0"
-        },
-        {
             "id": "5",
             "name": "str_count"
         },
@@ -3503,6 +3491,10 @@
         {
             "id": "10",
             "name": "e_picked_mag"
+        },
+        {
+            "id": "d4fb7cae-1e61-4544-b83c-e3b8ac41500e__L0",
+            "name": "Local 0"
         }
     ],
     "engineFieldValues": [
