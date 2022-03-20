@@ -441,7 +441,7 @@
                             "args": {
                                 "variable": "1",
                                 "__collapseElse": true,
-                                "__collapse": true
+                                "__collapse": false
                             },
                             "children": {
                                 "true": [
@@ -452,7 +452,7 @@
                                                 "Hehe hoho!\nnow it's my turn!"
                                             ],
                                             "avatarId": "",
-                                            "__collapse": true
+                                            "__collapse": false
                                         },
                                         "id": "1d2ec126-b48f-4190-8de1-5992fcb811cf"
                                     },
@@ -634,7 +634,7 @@
                                                 "$14$"
                                             ],
                                             "avatarId": "",
-                                            "__collapse": true
+                                            "__collapse": false
                                         },
                                         "id": "17133406-81a2-4aa3-bf66-1c5a5c55b81b"
                                     },
@@ -1007,7 +1007,7 @@
                                 "operator": "==",
                                 "comparator": "0",
                                 "__collapseElse": true,
-                                "__collapse": true
+                                "__collapse": false
                             },
                             "children": {
                                 "true": [
@@ -1015,23 +1015,13 @@
                                         "command": "EVENT_TEXT",
                                         "args": {
                                             "text": [
-                                                "You've been \ndefeated!"
+                                                "You've been \ndefeated!",
+                                                "Game Over!"
                                             ],
                                             "avatarId": "",
-                                            "__collapse": true
+                                            "__collapse": false
                                         },
                                         "id": "361ce319-d514-492c-85f0-3e5f9ba66ab5"
-                                    },
-                                    {
-                                        "command": "EVENT_SWITCH_SCENE",
-                                        "args": {
-                                            "sceneId": "69a477b2-18ed-41b2-9dd6-48bbf4a03c79",
-                                            "x": 0,
-                                            "y": 0,
-                                            "direction": "",
-                                            "fadeSpeed": "2"
-                                        },
-                                        "id": "cc68e07d-89b6-475c-b839-8b1206051806"
                                     }
                                 ],
                                 "false": []
@@ -1045,7 +1035,7 @@
                                 "operator": "==",
                                 "comparator": "0",
                                 "__collapseElse": true,
-                                "__collapse": true
+                                "__collapse": false
                             },
                             "children": {
                                 "true": [
@@ -1053,7 +1043,7 @@
                                         "command": "EVENT_TEXT",
                                         "args": {
                                             "text": [
-                                                "Enemy Defeated!\nyou win!"
+                                                "Enemy Defeated!"
                                             ],
                                             "avatarId": ""
                                         },
@@ -1062,13 +1052,13 @@
                                     {
                                         "command": "EVENT_SWITCH_SCENE",
                                         "args": {
-                                            "sceneId": "3f5ca467-e80a-4c41-8d40-fe6c7a96442f",
-                                            "x": 0,
-                                            "y": 0,
+                                            "sceneId": "5f5b1fb9-1325-4caa-9d7c-afbd390ad84d",
+                                            "x": 8,
+                                            "y": 16,
                                             "direction": "",
                                             "fadeSpeed": "2"
                                         },
-                                        "id": "5db10330-deed-472f-96ec-06e29f2bfddb"
+                                        "id": "43edd93b-bfe1-49d2-bc70-dd5dc7d13f25"
                                     }
                                 ],
                                 "false": []
@@ -1943,7 +1933,7 @@
                         "operation": "set",
                         "other": "val",
                         "vectorY": "L0",
-                        "value": 20,
+                        "value": 5,
                         "minValue": "0",
                         "maxValue": "32767",
                         "clamp": false
@@ -1958,8 +1948,8 @@
             "autoFadeEventCollapse": true
         },
         {
-            "name": "Scene 2",
-            "backgroundId": "c859b3a3-4f34-49cd-9c2f-45bfcbee4a8e",
+            "name": "Scene 4",
+            "backgroundId": "5037deaf-9874-4511-b040-dfff55a08438",
             "width": 20,
             "height": 18,
             "type": "TOPDOWN",
@@ -1967,19 +1957,33 @@
             "spritePaletteIds": [],
             "collisions": [],
             "autoFadeSpeed": 1,
-            "id": "69a477b2-18ed-41b2-9dd6-48bbf4a03c79",
-            "x": 249.19999999999993,
-            "y": 503.82857142857125,
+            "id": "5f5b1fb9-1325-4caa-9d7c-afbd390ad84d",
+            "x": 147.8666666666666,
+            "y": 287.73333333333323,
             "actors": [],
             "triggers": [],
-            "script": [],
+            "script": [
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "The Game is over \nnow",
+                            "That's it that's \nthe whole game",
+                            "Thanks for playing\n:))"
+                        ],
+                        "avatarId": ""
+                    },
+                    "id": "591f5a5c-1dd6-4048-ae17-b31418d7f881"
+                }
+            ],
             "playerHit1Script": [],
             "playerHit2Script": [],
-            "playerHit3Script": []
+            "playerHit3Script": [],
+            "playerSpriteSheetId": "df7660f4-5ccf-4d5d-9eca-7d4880b5367e"
         },
         {
-            "name": "Scene 3",
-            "backgroundId": "03a9909c-0530-4b1e-8d0d-e7dab6068580",
+            "name": "Scene 5",
+            "backgroundId": "ec11d8c1-4d10-4783-9843-2884c76a6137",
             "width": 20,
             "height": 18,
             "type": "TOPDOWN",
@@ -1987,15 +1991,29 @@
             "spritePaletteIds": [],
             "collisions": [],
             "autoFadeSpeed": 1,
-            "id": "3f5ca467-e80a-4c41-8d40-fe6c7a96442f",
-            "x": 516.7999999999996,
-            "y": 493.1999999999998,
+            "id": "1a58871d-1744-4a41-a246-416c4e734886",
+            "x": 648.5333333333332,
+            "y": 276.66666666666674,
             "actors": [],
             "triggers": [],
-            "script": [],
+            "script": [
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "The Game is over \nnow",
+                            "That's it that's \nthe whole game",
+                            "Thanks for playing\n:))"
+                        ],
+                        "avatarId": ""
+                    },
+                    "id": "f6479d79-03c7-4ad1-824e-b3ee3ab113bd"
+                }
+            ],
             "playerHit1Script": [],
             "playerHit2Script": [],
-            "playerHit3Script": []
+            "playerHit3Script": [],
+            "playerSpriteSheetId": "df7660f4-5ccf-4d5d-9eca-7d4880b5367e"
         }
     ],
     "backgrounds": [
@@ -2006,7 +2024,8 @@
             "height": 18,
             "imageWidth": 160,
             "imageHeight": 144,
-            "filename": "battlebg.png"
+            "filename": "battlebg.png",
+            "tileColors": []
         },
         {
             "id": "c859b3a3-4f34-49cd-9c2f-45bfcbee4a8e",
@@ -2015,7 +2034,17 @@
             "height": 18,
             "imageWidth": 160,
             "imageHeight": 144,
-            "filename": "losescreen.png"
+            "filename": "losescreen.png",
+            "tileColors": []
+        },
+        {
+            "id": "ec11d8c1-4d10-4783-9843-2884c76a6137",
+            "name": "losescreennew",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "losescreennew.png"
         },
         {
             "id": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
@@ -2034,7 +2063,17 @@
             "height": 18,
             "imageWidth": 160,
             "imageHeight": 144,
-            "filename": "winscreen.png"
+            "filename": "winscreen.png",
+            "tileColors": []
+        },
+        {
+            "id": "5037deaf-9874-4511-b040-dfff55a08438",
+            "name": "winscreennew",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "winscreennew.png"
         }
     ],
     "spriteSheets": [
@@ -4029,6 +4068,133 @@
             "boundsWidth": 16,
             "boundsHeight": 16,
             "animSpeed": 15
+        },
+        {
+            "id": "df7660f4-5ccf-4d5d-9eca-7d4880b5367e",
+            "name": "tp",
+            "numFrames": 1,
+            "type": "static",
+            "filename": "tp.png",
+            "checksum": "524f980a5456a600f746f8d8a007d72bc646755c",
+            "width": 16,
+            "height": 16,
+            "states": [
+                {
+                    "id": "25a8938b-f013-481f-86d3-103f23191589",
+                    "name": "",
+                    "animationType": "fixed",
+                    "flipLeft": false,
+                    "animations": [
+                        {
+                            "id": "5dac0f6a-456e-4ffd-8e21-4c320fd4a167",
+                            "frames": [
+                                {
+                                    "id": "7429b261-1e85-4ea0-9fe0-b5654974a57a",
+                                    "tiles": [
+                                        {
+                                            "id": "06800cbf-88b1-4807-bb3e-f03e59f93516",
+                                            "x": 0,
+                                            "y": 0,
+                                            "sliceX": 0,
+                                            "sliceY": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "palette": 0,
+                                            "paletteIndex": 0,
+                                            "objPalette": "OBP0",
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "9e66b35f-b7ba-452a-9cc5-eb3483c25547",
+                                            "x": 8,
+                                            "y": 0,
+                                            "sliceX": 8,
+                                            "sliceY": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "palette": 0,
+                                            "paletteIndex": 0,
+                                            "objPalette": "OBP0",
+                                            "priority": false
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "4280c9d4-85bb-4a5c-ae50-4c8d8f46014a",
+                            "frames": [
+                                {
+                                    "id": "8f3a6b2d-d3d9-4bcc-903f-b7edf66e3f0e",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "a968020f-f635-435f-a451-08622f55c8c0",
+                            "frames": [
+                                {
+                                    "id": "919b0f65-8b71-464e-9a3f-cc4826d9f3d5",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "f027c781-9e8b-4173-a5ec-fb8ef546e295",
+                            "frames": [
+                                {
+                                    "id": "01d2d5f7-f99c-442e-a9e6-321a56ccafb4",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "35a71b71-88aa-400c-8f22-909236ed4b91",
+                            "frames": [
+                                {
+                                    "id": "0d0edcbe-03c5-4363-9078-85d369d94028",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "89af21b7-e568-4720-8ee0-948fed8fd91c",
+                            "frames": [
+                                {
+                                    "id": "ea765d1a-f72d-4f5d-bb45-38dadd0c4498",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "a233ff7e-93aa-4cda-b355-a1049dfc2e88",
+                            "frames": [
+                                {
+                                    "id": "17ca021b-9bd0-4623-8ebc-cdd56a3f32ce",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "e3770b89-503a-4ca7-a7b7-df6ce7f5f928",
+                            "frames": [
+                                {
+                                    "id": "4fb4117a-a949-4cdb-ab43-fcfa74b90cfc",
+                                    "tiles": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "numTiles": 0,
+            "canvasWidth": 16,
+            "canvasHeight": 16,
+            "boundsX": 0,
+            "boundsY": 0,
+            "boundsWidth": 16,
+            "boundsHeight": 16,
+            "animSpeed": 15
         }
     ],
     "palettes": [
@@ -4474,6 +4640,10 @@
         {
             "id": "d4fb7cae-1e61-4544-b83c-e3b8ac41500e__L0",
             "name": "Local 0"
+        },
+        {
+            "id": "19",
+            "name": "play_again"
         }
     ],
     "engineFieldValues": [
@@ -4491,9 +4661,9 @@
         "startDirection": "up",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 541,
-        "worldScrollY": 736,
-        "zoom": 250,
+        "worldScrollX": 468,
+        "worldScrollY": 348,
+        "zoom": 200,
         "customColorsEnabled": false,
         "sgbEnabled": false,
         "customHead": "",
