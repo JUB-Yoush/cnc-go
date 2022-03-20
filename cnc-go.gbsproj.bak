@@ -440,7 +440,7 @@
                             "command": "EVENT_IF_TRUE",
                             "args": {
                                 "variable": "1",
-                                "__collapseElse": true,
+                                "__collapseElse": false,
                                 "__collapse": false
                             },
                             "children": {
@@ -449,7 +449,7 @@
                                         "command": "EVENT_TEXT",
                                         "args": {
                                             "text": [
-                                                "Hehe hoho!\nnow it's my turn!"
+                                                "ENEMY TURN\n----------"
                                             ],
                                             "avatarId": "",
                                             "__collapse": false
@@ -628,42 +628,15 @@
                                         "id": "ecc13dc1-7571-4f0c-969e-e0bdf2e1ed7e"
                                     },
                                     {
-                                        "command": "EVENT_TEXT",
-                                        "args": {
-                                            "text": [
-                                                "$14$"
-                                            ],
-                                            "avatarId": "",
-                                            "__collapse": false
-                                        },
-                                        "id": "17133406-81a2-4aa3-bf66-1c5a5c55b81b"
-                                    },
-                                    {
-                                        "command": "EVENT_SET_FALSE",
-                                        "args": {
-                                            "variable": "15",
-                                            "__collapse": true
-                                        },
-                                        "id": "b143eddf-cb17-4258-a2e0-3c5f490b24a4"
-                                    },
-                                    {
-                                        "command": "EVENT_SET_FALSE",
-                                        "args": {
-                                            "variable": "1",
-                                            "__collapse": true
-                                        },
-                                        "id": "a817f7c9-593e-4ea3-bd15-af91a2adf2eb"
-                                    },
-                                    {
                                         "command": "EVENT_SWITCH",
                                         "args": {
-                                            "variable": "16",
+                                            "variable": "14",
                                             "choices": 3,
-                                            "__collapseCase0": false,
+                                            "__collapseCase0": true,
                                             "value0": 0,
-                                            "__collapseCase1": false,
+                                            "__collapseCase1": true,
                                             "value1": 1,
-                                            "__collapseCase2": false,
+                                            "__collapseCase2": true,
                                             "value2": 2,
                                             "__collapseCase3": false,
                                             "value3": 4,
@@ -691,7 +664,129 @@
                                             "value14": 15,
                                             "__collapseCase15": false,
                                             "value15": 16,
-                                            "__collapseElse": false
+                                            "__collapseElse": false,
+                                            "__collapse": true
+                                        },
+                                        "children": {
+                                            "true0": [
+                                                {
+                                                    "command": "EVENT_TEXT",
+                                                    "args": {
+                                                        "text": [
+                                                            "Enemy chose Str!"
+                                                        ],
+                                                        "avatarId": ""
+                                                    },
+                                                    "id": "8379f2c3-18f1-4054-8066-940f02ebffa6"
+                                                }
+                                            ],
+                                            "true1": [
+                                                {
+                                                    "command": "EVENT_TEXT",
+                                                    "args": {
+                                                        "text": [
+                                                            "Enemy chose Dex!"
+                                                        ],
+                                                        "avatarId": ""
+                                                    },
+                                                    "id": "d8d8604e-e938-4fb1-9927-fcc77a9dd3f1"
+                                                }
+                                            ],
+                                            "true2": [
+                                                {
+                                                    "command": "EVENT_TEXT",
+                                                    "args": {
+                                                        "text": [
+                                                            "Enemy chose Mag!"
+                                                        ],
+                                                        "avatarId": ""
+                                                    },
+                                                    "id": "9dd7670a-45af-4883-b754-00ade018e4f5"
+                                                }
+                                            ],
+                                            "true3": [],
+                                            "true4": [],
+                                            "true5": [],
+                                            "true6": [],
+                                            "true7": [],
+                                            "true8": [],
+                                            "true9": [],
+                                            "true10": [],
+                                            "true11": [],
+                                            "true12": [],
+                                            "true13": [],
+                                            "true14": [],
+                                            "true15": [],
+                                            "false": []
+                                        },
+                                        "id": "81697eee-cfa2-4cfa-93fe-304c97758b94"
+                                    },
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "$14$"
+                                            ],
+                                            "avatarId": "",
+                                            "__collapse": true
+                                        },
+                                        "id": "17133406-81a2-4aa3-bf66-1c5a5c55b81b"
+                                    },
+                                    {
+                                        "command": "EVENT_SET_FALSE",
+                                        "args": {
+                                            "variable": "15",
+                                            "__collapse": true
+                                        },
+                                        "id": "b143eddf-cb17-4258-a2e0-3c5f490b24a4"
+                                    },
+                                    {
+                                        "command": "EVENT_SET_FALSE",
+                                        "args": {
+                                            "variable": "1",
+                                            "__collapse": true
+                                        },
+                                        "id": "a817f7c9-593e-4ea3-bd15-af91a2adf2eb"
+                                    },
+                                    {
+                                        "command": "EVENT_SWITCH",
+                                        "args": {
+                                            "variable": "16",
+                                            "choices": 3,
+                                            "__collapseCase0": true,
+                                            "value0": 0,
+                                            "__collapseCase1": true,
+                                            "value1": 1,
+                                            "__collapseCase2": true,
+                                            "value2": 2,
+                                            "__collapseCase3": false,
+                                            "value3": 4,
+                                            "__collapseCase4": false,
+                                            "value4": 5,
+                                            "__collapseCase5": false,
+                                            "value5": 6,
+                                            "__collapseCase6": false,
+                                            "value6": 7,
+                                            "__collapseCase7": false,
+                                            "value7": 8,
+                                            "__collapseCase8": false,
+                                            "value8": 9,
+                                            "__collapseCase9": false,
+                                            "value9": 10,
+                                            "__collapseCase10": false,
+                                            "value10": 11,
+                                            "__collapseCase11": false,
+                                            "value11": 12,
+                                            "__collapseCase12": false,
+                                            "value12": 13,
+                                            "__collapseCase13": false,
+                                            "value13": 14,
+                                            "__collapseCase14": false,
+                                            "value14": 15,
+                                            "__collapseCase15": false,
+                                            "value15": 16,
+                                            "__collapseElse": true,
+                                            "__collapse": true
                                         },
                                         "children": {
                                             "true0": [
@@ -994,6 +1089,16 @@
                                             "false": []
                                         },
                                         "id": "1391342b-d3af-4e0b-9a9b-eff826dc6ac5"
+                                    },
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "PLAYER TURN\n-----------"
+                                            ],
+                                            "avatarId": ""
+                                        },
+                                        "id": "3cf9ca4a-d3ce-4843-a46b-7703ab8866e6"
                                     }
                                 ],
                                 "false": []
@@ -1007,7 +1112,7 @@
                                 "operator": "==",
                                 "comparator": "0",
                                 "__collapseElse": true,
-                                "__collapse": false
+                                "__collapse": true
                             },
                             "children": {
                                 "true": [
@@ -1015,8 +1120,7 @@
                                         "command": "EVENT_TEXT",
                                         "args": {
                                             "text": [
-                                                "You've been \ndefeated!",
-                                                "Game Over!"
+                                                "You've been \ndefeated!"
                                             ],
                                             "avatarId": "",
                                             "__collapse": false
@@ -1048,17 +1152,6 @@
                                             "avatarId": ""
                                         },
                                         "id": "c78e46cd-cdff-4f3b-9153-7ab94f58e019"
-                                    },
-                                    {
-                                        "command": "EVENT_SWITCH_SCENE",
-                                        "args": {
-                                            "sceneId": "5f5b1fb9-1325-4caa-9d7c-afbd390ad84d",
-                                            "x": 8,
-                                            "y": 16,
-                                            "direction": "",
-                                            "fadeSpeed": "2"
-                                        },
-                                        "id": "43edd93b-bfe1-49d2-bc70-dd5dc7d13f25"
                                     }
                                 ],
                                 "false": []
@@ -1505,13 +1598,13 @@
                     "command": "EVENT_TEXT",
                     "args": {
                         "text": [
-                            "A demon appeared!",
+                            "You've been chall-\nenged to a duel!",
                             "Select STR DEX or \nMAG!",
-                            "You can also press\nB to check how ",
-                            "many of each you \nhave."
+                            "You can also press\nB to check you and",
+                            "Your opponents \nstats."
                         ],
                         "avatarId": "",
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "id": "953fbfac-5123-4cc2-a0de-d3d5414fb195"
                 },
@@ -1824,18 +1917,7 @@
                                 "command": "EVENT_TEXT",
                                 "args": {
                                     "text": [
-                                        "PLAYER"
-                                    ],
-                                    "avatarId": "",
-                                    "__collapse": true
-                                },
-                                "id": "aa02a4a4-d8f0-4fa5-ad16-793c697432ad"
-                            },
-                            {
-                                "command": "EVENT_TEXT",
-                                "args": {
-                                    "text": [
-                                        "HP:$17$ Str:$05$ \nDex:$06$ Mag:$07$"
+                                        "PLAYER\n\nHP:$17$ Str:$05$ \nDex:$06$ Mag:$07$"
                                     ],
                                     "avatarId": "",
                                     "__collapse": false
@@ -1846,17 +1928,7 @@
                                 "command": "EVENT_TEXT",
                                 "args": {
                                     "text": [
-                                        "ENEMY:"
-                                    ],
-                                    "avatarId": ""
-                                },
-                                "id": "001fef45-ae36-4ad3-bfbe-f05b3d8595d8"
-                            },
-                            {
-                                "command": "EVENT_TEXT",
-                                "args": {
-                                    "text": [
-                                        "HP:$18$  Str:$11$ \nDex:$12$ Mag:$13$ "
+                                        "ENEMY\n\nHP:$18$  Str:$11$ \nDex:$12$ Mag:$13$ "
                                     ],
                                     "avatarId": ""
                                 },
@@ -1918,7 +1990,7 @@
                         "operation": "set",
                         "other": "val",
                         "vectorY": "L0",
-                        "value": 5,
+                        "value": 20,
                         "minValue": "0",
                         "maxValue": "32767",
                         "clamp": false,
@@ -1933,10 +2005,11 @@
                         "operation": "set",
                         "other": "val",
                         "vectorY": "L0",
-                        "value": 5,
+                        "value": 20,
                         "minValue": "0",
                         "maxValue": "32767",
-                        "clamp": false
+                        "clamp": false,
+                        "__collapse": false
                     },
                     "id": "b705a997-e4c3-4997-9624-5759d84ea916"
                 }
@@ -1958,8 +2031,8 @@
             "collisions": [],
             "autoFadeSpeed": 1,
             "id": "5f5b1fb9-1325-4caa-9d7c-afbd390ad84d",
-            "x": 147.8666666666666,
-            "y": 287.73333333333323,
+            "x": 203.3666666666666,
+            "y": 285.73333333333323,
             "actors": [],
             "triggers": [],
             "script": [
@@ -1992,8 +2065,8 @@
             "collisions": [],
             "autoFadeSpeed": 1,
             "id": "1a58871d-1744-4a41-a246-416c4e734886",
-            "x": 648.5333333333332,
-            "y": 276.66666666666674,
+            "x": 583.5333333333332,
+            "y": 288.16666666666674,
             "actors": [],
             "triggers": [],
             "script": [
@@ -2044,7 +2117,8 @@
             "height": 18,
             "imageWidth": 160,
             "imageHeight": 144,
-            "filename": "losescreennew.png"
+            "filename": "losescreennew.png",
+            "tileColors": []
         },
         {
             "id": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
@@ -2073,7 +2147,8 @@
             "height": 18,
             "imageWidth": 160,
             "imageHeight": 144,
-            "filename": "winscreennew.png"
+            "filename": "winscreennew.png",
+            "tileColors": []
         }
     ],
     "spriteSheets": [
@@ -4501,7 +4576,22 @@
             "filename": "gbs-var.png"
         }
     ],
-    "avatars": [],
+    "avatars": [
+        {
+            "id": "b601070e-64b2-4010-a9c1-dd45fa7dbba1",
+            "name": "eavi",
+            "width": 16,
+            "height": 16,
+            "filename": "eavi.png"
+        },
+        {
+            "id": "4a58bb73-9028-4031-ad31-896819246072",
+            "name": "pavi",
+            "width": 16,
+            "height": 16,
+            "filename": "pavi.png"
+        }
+    ],
     "emotes": [
         {
             "id": "9df5f63f-ea47-447e-9b14-cb2dbafb697d",
@@ -4638,12 +4728,12 @@
             "name": "e_hp"
         },
         {
-            "id": "d4fb7cae-1e61-4544-b83c-e3b8ac41500e__L0",
-            "name": "Local 0"
-        },
-        {
             "id": "19",
             "name": "play_again"
+        },
+        {
+            "id": "d4fb7cae-1e61-4544-b83c-e3b8ac41500e__L0",
+            "name": "Local 0"
         }
     ],
     "engineFieldValues": [
@@ -4661,8 +4751,8 @@
         "startDirection": "up",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 468,
-        "worldScrollY": 348,
+        "worldScrollX": 306,
+        "worldScrollY": 882,
         "zoom": 200,
         "customColorsEnabled": false,
         "sgbEnabled": false,
