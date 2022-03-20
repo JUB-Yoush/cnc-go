@@ -2120,6 +2120,103 @@
             "playerHit2Script": [],
             "playerHit3Script": [],
             "playerSpriteSheetId": "df7660f4-5ccf-4d5d-9eca-7d4880b5367e"
+        },
+        {
+            "name": "Scene 4",
+            "backgroundId": "0610be90-1885-440d-8d72-cb4d36cc48ec",
+            "width": 20,
+            "height": 18,
+            "type": "TOPDOWN",
+            "paletteIds": [],
+            "spritePaletteIds": [],
+            "collisions": [],
+            "autoFadeSpeed": 1,
+            "id": "febaa8b6-60b4-4576-b429-388ebed6cca6",
+            "x": 201,
+            "y": 30,
+            "actors": [],
+            "triggers": [],
+            "script": [
+                {
+                    "command": "EVENT_SET_INPUT_SCRIPT",
+                    "args": {
+                        "input": [
+                            "start"
+                        ],
+                        "override": true,
+                        "__scriptTabs": "press"
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_SWITCH_SCENE",
+                                "args": {
+                                    "sceneId": "2c3ab2d8-620f-438f-87a3-05acafa93595",
+                                    "x": 0,
+                                    "y": 0,
+                                    "direction": "",
+                                    "fadeSpeed": "2"
+                                },
+                                "id": "25bfcfcf-88f0-4ba6-a760-12151bf78d7f"
+                            }
+                        ]
+                    },
+                    "id": "6605fc06-8214-4fc1-8a9d-15fcb1e2c13c"
+                }
+            ],
+            "playerHit1Script": [],
+            "playerHit2Script": [],
+            "playerHit3Script": [],
+            "playerSpriteSheetId": "df7660f4-5ccf-4d5d-9eca-7d4880b5367e"
+        },
+        {
+            "name": "Scene 5",
+            "backgroundId": "2e8c58fe-0e59-44fa-a1cf-71d0be821980",
+            "width": 20,
+            "height": 18,
+            "type": "TOPDOWN",
+            "paletteIds": [],
+            "spritePaletteIds": [],
+            "collisions": [],
+            "autoFadeSpeed": 1,
+            "id": "2c3ab2d8-620f-438f-87a3-05acafa93595",
+            "x": 400,
+            "y": 30,
+            "actors": [],
+            "triggers": [],
+            "script": [
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "HOW TO PLAY",
+                            "You have the \noption of picking",
+                            "between strength,\ndexterity, and \nmagic.",
+                            "they have a rock\npaper scissors \nlike relationship.",
+                            "as well as a\nlimited supply of \n3 each.",
+                            "You start the game\nwith 20 hp",
+                            "The goal is to \nreduce your \nenemies hp to 0"
+                        ],
+                        "avatarId": ""
+                    },
+                    "id": "f831d531-ffdf-4d63-ac91-60dbaec90e3a"
+                },
+                {
+                    "command": "EVENT_SWITCH_SCENE",
+                    "args": {
+                        "sceneId": "bd54db1e-1f9e-43d5-8f12-52ba78c24f87",
+                        "x": 2,
+                        "y": 14,
+                        "direction": "up",
+                        "fadeSpeed": "2"
+                    },
+                    "id": "baf98783-c8e3-4233-b419-f0378c9f3fff"
+                }
+            ],
+            "playerHit1Script": [],
+            "playerHit2Script": [],
+            "playerHit3Script": [],
+            "playerSpriteSheetId": "df7660f4-5ccf-4d5d-9eca-7d4880b5367e"
         }
     ],
     "backgrounds": [
@@ -2162,6 +2259,24 @@
             "imageHeight": 144,
             "filename": "placeholder.png",
             "tileColors": []
+        },
+        {
+            "id": "0610be90-1885-440d-8d72-cb4d36cc48ec",
+            "name": "title",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "title.png"
+        },
+        {
+            "id": "2e8c58fe-0e59-44fa-a1cf-71d0be821980",
+            "name": "tutorial",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "tutorial.png"
         },
         {
             "id": "03a9909c-0530-4b1e-8d0d-e7dab6068580",
@@ -5142,16 +5257,16 @@
         }
     ],
     "settings": {
-        "startSceneId": "bd54db1e-1f9e-43d5-8f12-52ba78c24f87",
-        "startX": 2,
-        "startY": 14,
+        "startSceneId": "febaa8b6-60b4-4576-b429-388ebed6cca6",
+        "startX": 3,
+        "startY": 16,
         "startMoveSpeed": 1,
         "startAnimSpeed": 15,
         "startDirection": "up",
         "showCollisions": true,
         "showConnections": true,
         "worldScrollX": 322,
-        "worldScrollY": 227,
+        "worldScrollY": 0,
         "zoom": 200,
         "customColorsEnabled": false,
         "sgbEnabled": false,
