@@ -6,7 +6,7 @@
     "scenes": [
         {
             "name": "Scene 1",
-            "backgroundId": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
+            "backgroundId": "9f0be0f8-7d5b-45d4-81be-0da50f879aeb",
             "width": 20,
             "height": 18,
             "type": "ADVENTURE",
@@ -376,14 +376,14 @@
             ],
             "autoFadeSpeed": 1,
             "id": "bd54db1e-1f9e-43d5-8f12-52ba78c24f87",
-            "x": 392.42857142857144,
-            "y": 283.00000000000006,
+            "x": 394.8285714285716,
+            "y": 287.4000000000001,
             "actors": [
                 {
                     "name": "",
                     "frame": 0,
                     "animate": false,
-                    "spriteSheetId": "c5ce5eb8-fb81-4a1f-abca-65a3a7f642f4",
+                    "spriteSheetId": "9be0279f-60b9-4fe3-9eb4-47334e77223e",
                     "direction": "down",
                     "moveSpeed": 1,
                     "animSpeed": 31,
@@ -441,7 +441,7 @@
                             "args": {
                                 "variable": "1",
                                 "__collapseElse": true,
-                                "__collapse": false
+                                "__collapse": true
                             },
                             "children": {
                                 "true": [
@@ -700,11 +700,11 @@
                                                     "args": {
                                                         "variable": "14",
                                                         "choices": 3,
-                                                        "__collapseCase0": false,
+                                                        "__collapseCase0": true,
                                                         "value0": 0,
-                                                        "__collapseCase1": false,
+                                                        "__collapseCase1": true,
                                                         "value1": 1,
-                                                        "__collapseCase2": false,
+                                                        "__collapseCase2": true,
                                                         "value2": 2,
                                                         "__collapseCase3": false,
                                                         "value3": 4,
@@ -733,7 +733,7 @@
                                                         "__collapseCase15": false,
                                                         "value15": 16,
                                                         "__collapseElse": false,
-                                                        "__collapse": true
+                                                        "__collapse": false
                                                     },
                                                     "children": {
                                                         "true0": [
@@ -999,6 +999,81 @@
                                 "false": []
                             },
                             "id": "a95c384d-77a1-4ae1-8d1a-1917ce631e86"
+                        },
+                        {
+                            "command": "EVENT_IF_VALUE",
+                            "args": {
+                                "variable": "17",
+                                "operator": "==",
+                                "comparator": "0",
+                                "__collapseElse": true,
+                                "__collapse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "You've been \ndefeated!"
+                                            ],
+                                            "avatarId": "",
+                                            "__collapse": true
+                                        },
+                                        "id": "361ce319-d514-492c-85f0-3e5f9ba66ab5"
+                                    },
+                                    {
+                                        "command": "EVENT_SWITCH_SCENE",
+                                        "args": {
+                                            "sceneId": "69a477b2-18ed-41b2-9dd6-48bbf4a03c79",
+                                            "x": 0,
+                                            "y": 0,
+                                            "direction": "",
+                                            "fadeSpeed": "2"
+                                        },
+                                        "id": "cc68e07d-89b6-475c-b839-8b1206051806"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "69f39cbf-f9da-4ae1-b403-671cb4cc59b7"
+                        },
+                        {
+                            "command": "EVENT_IF_VALUE",
+                            "args": {
+                                "variable": "18",
+                                "operator": "==",
+                                "comparator": "0",
+                                "__collapseElse": true,
+                                "__collapse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "Enemy Defeated!\nyou win!"
+                                            ],
+                                            "avatarId": ""
+                                        },
+                                        "id": "c78e46cd-cdff-4f3b-9153-7ab94f58e019"
+                                    },
+                                    {
+                                        "command": "EVENT_SWITCH_SCENE",
+                                        "args": {
+                                            "sceneId": "3f5ca467-e80a-4c41-8d40-fe6c7a96442f",
+                                            "x": 0,
+                                            "y": 0,
+                                            "direction": "",
+                                            "fadeSpeed": "2"
+                                        },
+                                        "id": "5db10330-deed-472f-96ec-06e29f2bfddb"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "9716e46e-aadc-4b37-b309-3e714f50be23"
                         }
                     ],
                     "hit1Script": [],
@@ -1853,12 +1928,27 @@
                         "operation": "set",
                         "other": "val",
                         "vectorY": "L0",
+                        "value": 5,
+                        "minValue": "0",
+                        "maxValue": "32767",
+                        "clamp": false,
+                        "__collapse": false
+                    },
+                    "id": "6078a871-4a2a-49e0-a54b-4586b8bfcb2e"
+                },
+                {
+                    "command": "EVENT_VARIABLE_MATH",
+                    "args": {
+                        "vectorX": "18",
+                        "operation": "set",
+                        "other": "val",
+                        "vectorY": "L0",
                         "value": 20,
                         "minValue": "0",
                         "maxValue": "32767",
                         "clamp": false
                     },
-                    "id": "6078a871-4a2a-49e0-a54b-4586b8bfcb2e"
+                    "id": "b705a997-e4c3-4997-9624-5759d84ea916"
                 }
             ],
             "playerHit1Script": [],
@@ -1866,9 +1956,67 @@
             "playerHit3Script": [],
             "playerSpriteSheetId": "fb799b21-73f7-4a4f-8004-cb708f74127e",
             "autoFadeEventCollapse": true
+        },
+        {
+            "name": "Scene 2",
+            "backgroundId": "c859b3a3-4f34-49cd-9c2f-45bfcbee4a8e",
+            "width": 20,
+            "height": 18,
+            "type": "TOPDOWN",
+            "paletteIds": [],
+            "spritePaletteIds": [],
+            "collisions": [],
+            "autoFadeSpeed": 1,
+            "id": "69a477b2-18ed-41b2-9dd6-48bbf4a03c79",
+            "x": 249.19999999999993,
+            "y": 503.82857142857125,
+            "actors": [],
+            "triggers": [],
+            "script": [],
+            "playerHit1Script": [],
+            "playerHit2Script": [],
+            "playerHit3Script": []
+        },
+        {
+            "name": "Scene 3",
+            "backgroundId": "03a9909c-0530-4b1e-8d0d-e7dab6068580",
+            "width": 20,
+            "height": 18,
+            "type": "TOPDOWN",
+            "paletteIds": [],
+            "spritePaletteIds": [],
+            "collisions": [],
+            "autoFadeSpeed": 1,
+            "id": "3f5ca467-e80a-4c41-8d40-fe6c7a96442f",
+            "x": 516.7999999999996,
+            "y": 493.1999999999998,
+            "actors": [],
+            "triggers": [],
+            "script": [],
+            "playerHit1Script": [],
+            "playerHit2Script": [],
+            "playerHit3Script": []
         }
     ],
     "backgrounds": [
+        {
+            "id": "9f0be0f8-7d5b-45d4-81be-0da50f879aeb",
+            "name": "battlebg",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "battlebg.png"
+        },
+        {
+            "id": "c859b3a3-4f34-49cd-9c2f-45bfcbee4a8e",
+            "name": "losescreen",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "losescreen.png"
+        },
         {
             "id": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
             "name": "placeholder",
@@ -1878,6 +2026,15 @@
             "imageHeight": 144,
             "filename": "placeholder.png",
             "tileColors": []
+        },
+        {
+            "id": "03a9909c-0530-4b1e-8d0d-e7dab6068580",
+            "name": "winscreen",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "winscreen.png"
         }
     ],
     "spriteSheets": [
@@ -4048,6 +4205,16 @@
                         "clamp": true
                     },
                     "id": "cf1a148b-8e28-4145-a2f0-c83000c27db9"
+                },
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "Player took 5 \nDamage!"
+                        ],
+                        "avatarId": ""
+                    },
+                    "id": "ddeacf49-9fe9-4a86-b5e4-82189d7eafac"
                 }
             ]
         },
@@ -4087,6 +4254,16 @@
                         "clamp": true
                     },
                     "id": "73c8b003-ec05-4d57-896f-ee419c1da42d"
+                },
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "Player Deals 5 \nDamage"
+                        ],
+                        "avatarId": ""
+                    },
+                    "id": "6525cfa1-e167-4dfe-bdcd-7a093d118b43"
                 }
             ]
         },
@@ -4279,10 +4456,6 @@
             "name": "e_selection"
         },
         {
-            "id": "d4fb7cae-1e61-4544-b83c-e3b8ac41500e__L0",
-            "name": "Local 0"
-        },
-        {
             "id": "15",
             "name": "e_proper_choice"
         },
@@ -4297,6 +4470,10 @@
         {
             "id": "18",
             "name": "e_hp"
+        },
+        {
+            "id": "d4fb7cae-1e61-4544-b83c-e3b8ac41500e__L0",
+            "name": "Local 0"
         }
     ],
     "engineFieldValues": [
@@ -4314,9 +4491,9 @@
         "startDirection": "up",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 1036,
-        "worldScrollY": 993,
-        "zoom": 350,
+        "worldScrollX": 541,
+        "worldScrollY": 736,
+        "zoom": 250,
         "customColorsEnabled": false,
         "sgbEnabled": false,
         "customHead": "",
@@ -4344,9 +4521,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            30,
+            205,
             261,
-            705
+            530
         ],
         "showNavigator": true,
         "defaultFontId": "4bd653f0-e08d-424e-9e5b-c1f3aaa21e47",
